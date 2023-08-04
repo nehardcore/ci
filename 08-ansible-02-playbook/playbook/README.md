@@ -1,5 +1,10 @@
 # Netology playgroud | Ansible playbook Clickhouse & Vector installation on Centos7
 
+- [Installation](#installation)
+- [Prerequisite](#Prerequisite)
+- [Configure](#Configure)
+- [Install](#Install)
+
 ## Installation
 
 This ansible playbook supports the following,
