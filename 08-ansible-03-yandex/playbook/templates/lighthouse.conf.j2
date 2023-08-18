@@ -1,0 +1,14 @@
+server {
+    listen 80;  # Change this to the desired port if needed
+    server_name {{ ansible_host }};  # Use the host's IP or domain
+
+    location / {
+        proxy_pass http://localhost:8123;  # Replace with your Lighthouse application's address
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # Add more location blocks or configurations as needed
+}
