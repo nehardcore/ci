@@ -27,15 +27,50 @@
    ```
 
 2. При помощи `ansible-galaxy` скачайте себе эту роль.
+```zsh
+cch@MBP-Costas 08-ansible-04-role % ansible-galaxy install -r requirements.yml -p roles
+Starting galaxy role install process
+- extracting clickhouse to /Users/cch/Netology/Ansible/08-ansible-04-role/roles/clickhouse
+- clickhouse (1.11.0) was installed successfully
+```
 3. Создайте новый каталог с ролью при помощи `ansible-galaxy role init vector-role`.
-4. На основе tasks из старого playbook заполните новую role. Разнесите переменные между `vars` и `default`. 
+```zsh
+cch@MBP-Costas Ansible % ansible-galaxy role init vector
+- Role vector was created successfully
+```
+4. На основе tasks из старого playbook заполните новую role. Разнесите переменные между `vars` и `default`.
+- done
 5. Перенести нужные шаблоны конфигов в `templates`.
+- done
 6. Опишите в `README.md` обе роли и их параметры. Пример качественной документации ansible role [по ссылке](https://github.com/cloudalchemy/ansible-prometheus).
+https://github.com/nehardcore/vector-role/blob/master/README.md
 7. Повторите шаги 3–6 для LightHouse. Помните, что одна роль должна настраивать один продукт.
+https://github.com/nehardcore/lighthouse-role/blob/master/README.md
 8. Выложите все roles в репозитории. Проставьте теги, используя семантическую нумерацию. Добавьте roles в `requirements.yml` в playbook.
+https://github.com/nehardcore/vector-role
+https://github.com/nehardcore/lighthouse-role
 9. Переработайте playbook на использование roles. Не забудьте про зависимости LightHouse и возможности совмещения `roles` с `tasks`.
+```yml
+---
+  - src: git@github.com:AlexeySetevoi/ansible-clickhouse.git
+    scm: git
+    version: "1.13"
+    name: clickhouse 
+  - src: git@github.com:nehardcore/vector-role.git
+    scm: git
+    version: "v1.1.1"
+    name: vector
+  - src: git@github.com:nehardcore/lighthouse-role.git
+    scm: git
+    version: "v2.2.2"
+    name: lighthouse
+```
 10. Выложите playbook в репозиторий.
+https://github.com/nehardcore/ansible/blob/main/08-ansible-04-role/site.yml
 11. В ответе дайте ссылки на оба репозитория с roles и одну ссылку на репозиторий с playbook.
+https://github.com/nehardcore/vector-role
+https://github.com/nehardcore/lighthouse-role
+https://github.com/nehardcore/ansible/blob/main/08-ansible-04-role/site.yml
 
 ---
 
