@@ -29,7 +29,8 @@
 6. В pom.xml необходимо поменять ссылки на репозиторий и nexus.  
 7. Запустите сборку по master, убедитесь, что всё прошло успешно и артефакт появился в nexus.  
 <img width="1148" alt="image" src="https://github.com/nehardcore/ci/assets/97674120/150556a3-ddac-423a-bd03-270e187e12fb">
-<img width="819" alt="image" src="https://github.com/nehardcore/ci/assets/97674120/8235d263-274b-4583-8e6d-57ab3bb1603a">
+<img width="786" alt="image" src="https://github.com/nehardcore/ci/assets/97674120/d12deaf4-9598-42a5-a8af-d627ad23df16">
+
 
 
 8. Мигрируйте `build configuration` в репозиторий.  
