@@ -64,8 +64,7 @@ Fast-forward
 
 18. Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity.  
 19. В ответе пришлите ссылку на репозиторий.  
-Teamcity-example: https://github.com/nehardcore/teamcity-example  
-Homework: https://github.com/nehardcore/ci/blob/main/09-ci-05-teamcity/README.md
+Teamcity-example: https://github.com/nehardcore/teamcity-example
 
   
 ---  
