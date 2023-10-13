@@ -39,12 +39,34 @@
 11. Дополните тест для нового метода на поиск слова `hunter` в новой реплике.  
 12. Сделайте push всех изменений в новую ветку репозитория.  
 13. Убедитесь, что сборка самостоятельно запустилась, тесты прошли успешно.  
+<img width="1133" alt="image" src="https://github.com/nehardcore/ci/assets/97674120/2e94b834-e30c-42a4-970c-c3b7032849e8">
+
+
 14. Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`.  
 15. Убедитесь, что нет собранного артефакта в сборке по ветке `master`.  
+```zsh
+cch@MBP-Costas teamcity-example % git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+cch@MBP-Costas teamcity-example % git merge feature/add_reply
+Updating 185ffa7..3bb57e8
+Fast-forward
+ src/main/java/plaindoll/Welcomer.java     | 3 +++
+ src/test/java/plaindoll/WelcomerTest.java | 4 ++++
+ 2 files changed, 7 insertions(+)
+```
+
 16. Настройте конфигурацию так, чтобы она собирала `.jar` в артефакты сборки.  
 17. Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны.  
+<img width="1082" alt="image" src="https://github.com/nehardcore/ci/assets/97674120/e043a7ba-3b12-4feb-8e65-c998ab2435c2">  
+<img width="407" alt="image" src="https://github.com/nehardcore/ci/assets/97674120/7783504c-145d-4350-ad54-3136027e0607">
+
+
 18. Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity.  
 19. В ответе пришлите ссылку на репозиторий.  
+Teamcity-example: https://github.com/nehardcore/teamcity-example
+Homework: https://github.com/nehardcore/ci/blob/main/09-ci-05-teamcity/README.md
+
   
 ---  
   
