@@ -43,7 +43,6 @@
 
 
 14. Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`.  
-15. Убедитесь, что нет собранного артефакта в сборке по ветке `master`.  
 ```zsh
 cch@MBP-Costas teamcity-example % git checkout master
 Switched to branch 'master'
@@ -56,6 +55,7 @@ Fast-forward
  2 files changed, 7 insertions(+)
 ```
 
+15. Убедитесь, что нет собранного артефакта в сборке по ветке `master`.  
 16. Настройте конфигурацию так, чтобы она собирала `.jar` в артефакты сборки.  
 17. Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны.  
 <img width="1082" alt="image" src="https://github.com/nehardcore/ci/assets/97674120/e043a7ba-3b12-4feb-8e65-c998ab2435c2">  
